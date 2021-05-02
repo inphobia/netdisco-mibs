@@ -1,5 +1,11 @@
 # work in progress README file
 
+* this directory is for cisco products which are not:
+  * small business devices, those go in ciscosb
+  * cisco ucs servers, those go in ciscousc
+	-> ftp://ftp.cisco.com/pub/mibs/ucs-mibs/
+
+
 * CISCO-PRODUCTS-MIB.my has it's last changed data overwritten,
   last modified timestamp of this file according to the cisco
   ftp site was 2019-08-23
