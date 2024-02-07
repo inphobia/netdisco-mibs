@@ -1,11 +1,6 @@
 --
--- Copyright 2010-2014 Ruckus Wireless, Inc. All rights reserved.
---
--- RUCKUS WIRELESS, INC. CONFIDENTIAL -
--- This is an unpublished, proprietary work of Ruckus Wireless, Inc., and is
--- fully protected under copyright and trade secret laws. You may not view,
--- use, disclose, copy, or distribute this file or any information contained
--- herein except pursuant to a valid license from Ruckus.
+-- Copyright (c) 2010 by Ruckus Wireless, Inc.
+-- All Rights Reserved
 --
 
 RUCKUS-PRODUCTS-MIB DEFINITIONS ::= BEGIN
@@ -13,14 +8,12 @@ RUCKUS-PRODUCTS-MIB DEFINITIONS ::= BEGIN
 IMPORTS
     ruckusProducts
         FROM RUCKUS-ROOT-MIB
+    ifIndex
+        FROM IF-MIB
     TruthValue,
     DisplayString,
     MacAddress
         FROM SNMPv2-TC
-    IpAddress,
-    TimeTicks,
-    Unsigned32,
-    OBJECT-TYPE,
     MODULE-IDENTITY
         FROM SNMPv2-SMI
     RuckusCountryCode
@@ -28,19 +21,19 @@ IMPORTS
 
 
 ruckusProductsMIB MODULE-IDENTITY
-    LAST-UPDATED "201405191100Z"
+    LAST-UPDATED "201010150800Z"
     ORGANIZATION "Ruckus Wireless, Inc."
     CONTACT-INFO
         "Ruckus Wireless, Inc.
 
+        Postal:
         350 West Java Dr.
         Sunnyvale, CA 94089
         USA
 
-        T: +1 (650) 265-4200
-        F: +1 (408) 738-2065
-        EMail: info@ruckuswireless.com
-        Web: www.ruckuswireless.com"
+        EMail: support@ruckuswireless.com
+
+        Phone: +1-650-265-4200"
     DESCRIPTION
         "Ruckus product OID registration mib."
     ::= { ruckusProducts 1 }
@@ -110,10 +103,10 @@ ruckusMM2221 OBJECT IDENTIFIER  ::= { ruckusWirelessMetroProducts 3 }
 --
 -- ZF2925 - 802.11b/g AP, 5 Ethernet ports, 8MB Flash, 32MB DRAM
 ruckusZF2925 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 1 }
-   
+    
 -- ZF2942 - 802.11b/g AP, 2 Ethernet ports, 16MB Flash, 32MB DRAM
 ruckusZF2942 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 2 }
- 
+  
 -- ZF7942 - 802.11n AP, 2 Ethernet ports, 16MB Flash, 64MB DRAM
 ruckusZF7942 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 3 }
 
@@ -126,115 +119,115 @@ ruckusZF2741 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 5 }
 -- ZF7762 - 802.11n Dual-Band Outdoor AP, 2 Ethernet ports, 16MB Flash, 32MB DRAM
 ruckusZF7762 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 6 }
 
--- ZF7762-S -
+-- ZF7762-S - 
 ruckusZF7762S OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 8 }
 
--- ZF7762-T -
+-- ZF7762-T - 
 ruckusZF7762T OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 9 }
-   
--- ZF7762-N -
+    
+-- ZF7762-N - 
 ruckusZF7762N OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 10 }
-   
--- ZF7343 -
+    
+-- ZF7343 - 
 ruckusZF7343 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 12 }
-   
--- ZF7363 -
+    
+-- ZF7363 - 
 ruckusZF7363 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 13 }
-   
--- ZF7341 -
+    
+-- ZF7341 - 
 ruckusZF7341 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 14 }
 
--- ZF7211 -
+-- ZF7211 - 
 --ruckusZF7211 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 15 }
 
--- ZF7731 -
+-- ZF7731 - 
 ruckusZF7731 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 16 }
 
--- ZF7025 -
+-- ZF7025 - 
 ruckusZF7025 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 20 }
 
--- ZF7321 -
+-- ZF7321 - 
 ruckusZF7321 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 22 }
 
--- ZF7321-U -
+-- ZF7321-U - 
 ruckusZF7321U OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 23 }
 
--- ZF2741-EXT -
+-- ZF2741-EXT - 
 ruckusZF2741EXT OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 24 }
 
--- ZF7982 -
+-- ZF7982 - 
 ruckusZF7982 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 25 }
 
--- ZF7782 -
+-- ZF7782 - 
 ruckusZF7782 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 28 }
 
--- ZF7782-S -
+-- ZF7782-S - 
 ruckusZF7782S OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 29 }
 
--- ZF7782-N -
+-- ZF7782-N - 
 ruckusZF7782N OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 30 }
 
--- ZF7782-E -
+-- ZF7782-E - 
 ruckusZF7782E OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 31 }
 
--- ZF8800-s-ac -
+-- ZF8800-s-ac - 
 ruckusZF8800SAC OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 32 }
 
--- ZF7762-AC -
+-- ZF7762-AC - 
 ruckusZF7762AC OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 35 }
 
--- ZF7762-S-AC -
+-- ZF7762-S-AC - 
 ruckusZF7762SAC OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 36 }
 
--- ZF7762-T-AC -
+-- ZF7762-T-AC - 
 ruckusZF7762TAC OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 37 }
 
--- ZF7372 -
+-- ZF7372 - 
 ruckusZF7372 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 40 }
 
--- ZF7372-E -
+-- ZF7372-E - 
 ruckusZF7372E OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 41 }
 
 -- ZF7441 -
 ruckusZF7441 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 42 }
 
--- ZF7352 -
+-- ZF7352 - 
 ruckusZF7352 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 45 }
 
--- ZF7351 -
+-- ZF7351 - 
 ruckusZF7351 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 48 }
 
--- ZF7742 -
+-- ZF7742 - 
 ruckusZF7742 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 50 }
 
--- ZF7055 -
+-- ZF7055 - 
 ruckusZF7055 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 52 }
 
--- ZF7781-M -
+-- ZF7781-M - 
 ruckusZF7781M OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 55 }
 
--- ZF7781CM -
+-- ZF7781CM - 
 ruckusZF7781CM OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 56 }
 
--- ZF7781CM-E -
+-- ZF7781CM-E - 
 ruckusZF7781CME OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 57 }
 
--- ZF7781CM-S -
+-- ZF7781CM-S - 
 ruckusZF7781CMS OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 58 }
 
--- ZF7781-FN -
+-- ZF7781-FN - 
 ruckusZF7781FN OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 60 }
 
--- ZF7781-FN-E -
+-- ZF7781-FN-E - 
 ruckusZF7781FNE OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 61 }
 
--- ZF7781-FN-S -
+-- ZF7781-FN-S - 
 ruckusZF7781FNS OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 62 }
 
--- SC8800-S-AC -
+-- SC8800-S-AC - 
 ruckusSC8800SAC OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 65 }
 
--- SC8800-S -
+-- SC8800-S - 
 ruckusSC8800S OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 66 }
 
 -- R300 -
@@ -330,7 +323,7 @@ ruckusT310C OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 103 }
 -- T310D -
 ruckusT310D OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 104 }
 
--- T310N -
+-- T310N - 
 ruckusT310N OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 105 }
 
 -- T310S -
@@ -353,6 +346,321 @@ ruckusT305E OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 111 }
 
 -- T750 -
 ruckusT750 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 112 }
+
+-- R650 -
+ruckusR650 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 113 }
+
+-- R550 -
+ruckusR550 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 114 }
+
+-- R850 -
+ruckusR850 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 115 }
+
+-- T750SE -
+ruckusT750SE OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 116 }
+
+-- H550 -
+ruckusH550 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 117 }
+
+-- T350C -
+ruckusT350C OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 118 }
+
+-- T350D -
+ruckusT350D OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 119 }
+
+-- T350SE -
+ruckusT350SE OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 120 }
+
+-- R350 -
+ruckusR350 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 121 }
+
+-- H350 -
+ruckusH350 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 122 }
+
+-- R760 -
+ruckusR760 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 123 }
+
+-- R560 -
+ruckusR560 OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 124 }
+
+ruckusC110ControlLED OBJECT-TYPE
+   SYNTAX  INTEGER {
+         softResetAP(10),
+         factoryResetAP(12),
+         softResetCM(13),
+         factoryResetCM(15) }
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "softResetAP(10):                  Soft reset of Access Point,
+         factoryResetAP(12):               Reset Access Point to factory defaults,
+         softResetCM(13):                  Soft reset of Cable Modem,
+         factoryResetCM(15):               Reset Cable Modem to factory defaults"
+    DEFVAL { ledPerCM }
+    ::= { ruckusC110 3 }
+
+ruckusC110WanIPAddr OBJECT-TYPE
+    SYNTAX  IpAddress
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Specifies the IP address of the Cable Modem WAN interface."
+    ::= { ruckusC110 4 }
+
+ruckusC110Customization OBJECT IDENTIFIER          ::= { ruckusC110 5 }
+
+ruckusC110HTTPService OBJECT-TYPE
+    SYNTAX  TruthValue
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Enable/disable HTTP service."
+    DEFVAL { false }
+    ::= { ruckusC110Customization 1 }
+
+ruckusC110TelnetService OBJECT-TYPE
+    SYNTAX  TruthValue
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Enable/disable Telnet service."
+    DEFVAL { false }
+    ::= { ruckusC110Customization 2 }
+
+ruckusC110SSHService OBJECT-TYPE
+    SYNTAX  TruthValue
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Enable/disable SSH service."
+    DEFVAL { true }
+    ::= { ruckusC110Customization 3 }
+
+ruckusC110Username OBJECT-TYPE
+    SYNTAX  DisplayString (SIZE (1..64))
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Specifies username of cable modem. "
+    ::= { ruckusC110Customization 4 }
+
+ruckusC110Password OBJECT-TYPE
+    SYNTAX  DisplayString (SIZE (1..64))
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Specifies password of cable modem. "
+    ::= { ruckusC110Customization 5 }
+
+ruckusC110CpeAgingOutTimer OBJECT-TYPE
+    SYNTAX  INTEGER (0..86400)
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "While CM is adding the CPE in the learning table, 
+        if it reaches the number of MAX CPE it will remove 
+        the existing CPE which has no upstream traffic for N seconds. 
+        Where N is the value of this MIB. 
+        N=0 means to follow original implementation. 
+        That is no CPE will be removed for any new comers."
+        DEFVAL { 0 }
+    ::= { ruckusC110 9 }
+
+--
+-- Wireless SmartCell Gateway Products
+--
+-- SCG200
+ruckusSCG200 OBJECT IDENTIFIER  ::= { ruckusWirelessSmartCellGatewayProducts 1 }
+
+--
+-- Wireless SmartZone Products
+--
+-- SZ100
+ruckusSZ100 OBJECT IDENTIFIER  ::= { ruckusWirelessSmartZoneProducts 1 }
+
+ruckusSZ50 OBJECT IDENTIFIER  ::= { ruckusWirelessSmartZoneProducts 2 }
+
+
+ruckusC110WanIPV6Addr OBJECT-TYPE
+    SYNTAX  DisplayString (SIZE (2..40))
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+         "Specifies the IPV6 address of the Cable Modem WAN interface."    
+    ::= { ruckusC110 10 }
+
+ruckusT811CMControlLED OBJECT-TYPE
+   SYNTAX  INTEGER {
+         softResetAP(10),
+         factoryResetAP(12),
+         softResetCM(13),
+         factoryResetCM(15) }
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "softResetAP(10):                  Soft reset of Access Point,
+         factoryResetAP(12):               Reset Access Point to factory defaults,
+         softResetCM(13):                  Soft reset of Cable Modem,
+         factoryResetCM(15):               Reset Cable Modem to factory defaults"
+    DEFVAL { ledPerCM }
+    ::= { ruckusT811CM 3 }
+
+ruckusCMM310WanIPAddr OBJECT-TYPE
+    SYNTAX  IpAddress
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Specifies the IP address of the Cable Modem WAN interface."
+    ::= { ruckusT811CM 4 }
+
+ruckusCMM310WanIPV6Addr OBJECT-TYPE
+    SYNTAX  DisplayString (SIZE (2..40))
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+         "Specifies the IPV6 address of the Cable Modem WAN interface."    
+    ::= { ruckusT811CM 10 }
+
+ruckusCMM310ControlLED OBJECT-TYPE
+   SYNTAX  INTEGER {
+         softResetAP(10),
+         factoryResetAP(12),
+         softResetCM(13),
+         factoryResetCM(15) }
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "softResetAP(10):                  Soft reset of Access Point,
+         factoryResetAP(12):               Reset Access Point to factory defaults,
+         softResetCM(13):                  Soft reset of Cable Modem,
+         factoryResetCM(15):               Reset Cable Modem to factory defaults"
+    DEFVAL { ledPerCM }
+    ::= { ruckusCMM310 3 }
+
+ruckusCMM310WanIPAddr OBJECT-TYPE
+    SYNTAX  IpAddress
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Specifies the IP address of the Cable Modem WAN interface."
+    ::= { ruckusCMM310 4 }
+
+ruckusCMM310Customization OBJECT IDENTIFIER          ::= { ruckusCMM310 5 }
+
+ruckusCMM310HTTPService OBJECT-TYPE
+    SYNTAX  TruthValue
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Enable/disable HTTP service."
+    DEFVAL { false }
+    ::= { ruckusCMM310Customization 1 }
+
+ruckusCMM310TelnetService OBJECT-TYPE
+    SYNTAX  TruthValue
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Enable/disable Telnet service."
+    DEFVAL { false }
+    ::= { ruckusCMM310Customization 2 }
+
+ruckusCMM310SSHService OBJECT IDENTIFIER             ::= { ruckusCMM310Customization 3 }
+
+ruckusCMM310SSHLanService OBJECT-TYPE
+    SYNTAX  TruthValue
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Enable/disable SSH service for Lan."
+    DEFVAL { true }
+    ::= { ruckusCMM310SSHService 1 }
+
+ruckusCMM310SSHWanService OBJECT-TYPE
+    SYNTAX  TruthValue
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Enable/disable SSH service for Wan."
+    DEFVAL { false }
+    ::= { ruckusCMM310SSHService 2 }
+
+ruckusCMM310Username OBJECT-TYPE
+    SYNTAX  DisplayString (SIZE (1..64))
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Specifies username of cable modem. "
+    ::= { ruckusCMM310Customization 4 }
+
+ruckusCMM310Password OBJECT-TYPE
+    SYNTAX  DisplayString (SIZE (1..64))
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Specifies password of cable modem. "
+    ::= { ruckusCMM310Customization 5 }
+
+ruckusCMM310SKUInformation OBJECT IDENTIFIER   ::= { ruckusCMM310Customization 6 }
+
+ruckusCMM310SKUID OBJECT-TYPE
+    SYNTAX  INTEGER {
+        ruckusCMM310-001(1),
+        ruckusCMM310-002(2),
+        ruckusCMM310-003(3),
+        ruckusCMM310-004(4),
+        ruckusCMM310-005(5) }
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Specifies the cable modem SKU
+        SKU ID                                              RF CAPABILITY                          DEFAULT SPLIT
+        ruckusCMM310-001(1):Base (NA) DOCSIS 3.1 SKU       (5-42, 108-1218), (5-85, 108-1218)     (5-85, 108-1218)
+        ruckusCMM310-002(2):Charter (NA) DOCSIS 3.1 SKU    (5-46, 258-1218), (5-204, 258-1218)    (5-204, 258-1218)
+        ruckusCMM310-003(3):Base (Euro) DOCSIS 3.1 SKU     (5-65, 258-1218), (5-204, 258-1218)    (5-204, 258-1218)
+        ruckusCMM310-004(4):Base (NA) DOCSIS 3.0 SKU       (5-42, 54-1002)                        (5-42, 54-1002)
+        ruckusCMM310-005(5):Base (Euro) DOCSIS 3.0 SKU     (5-65, 87.5-1002)                      (5-65, 87.5-1002)."
+    ::= { ruckusCMM310SKUInformation 1 }
+
+ruckusCMM310SKUCurrentRFSplit OBJECT-TYPE
+    SYNTAX DisplayString (SIZE (1..256))
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Specifies the RF Split for the given SKU."
+    ::= { ruckusCMM310SKUInformation 2 }
+
+ruckusCMM310EthernetMonitorService OBJECT-TYPE
+    SYNTAX  TruthValue
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "Enable/disable Ethernet Monitor Service.
+	 For Ruckus Internal use only."
+    DEFVAL { true }
+    ::= { ruckusCMM310Customization 7 }
+
+ruckusCMM310CpeAgingOutTimer OBJECT-TYPE
+    SYNTAX  INTEGER (0..86400)
+    MAX-ACCESS read-write
+    STATUS current
+    DESCRIPTION
+        "While CM is adding the CPE in the learning table,
+        if it reaches the number of MAX CPE it will remove
+        the existing CPE which has no upstream traffic for N seconds.
+        Where N is the value of this MIB.
+        N=0 means to follow original implementation.
+        That is no CPE will be removed for any newcomer."
+        DEFVAL { 0 }
+    ::= { ruckusCMM310 9 }
+
+ruckusCMM310WanIPV6Addr OBJECT-TYPE
+    SYNTAX  DisplayString (SIZE (2..40))
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+         "Specifies the IPV6 address of the Cable Modem WAN interface."
+    ::= { ruckusCMM310 10 }
 
 -- ZF7761CM - 802.11n Dual-Band Outdoor AP with CableModem, 2 Ethernet ports, 16MB Flash, 32MB DRAM
 ruckusZF7761CM OBJECT IDENTIFIER  ::= { ruckusWirelessHotzoneProducts 7 }
@@ -488,10 +796,10 @@ ruckusZD1100 OBJECT IDENTIFIER  ::= { ruckusWirelessControllerProducts 2 }
 -- ZD3000 - Access Controller, 2 Ethernet ports, 2048MB Flash, 1024MB DRAM
 ruckusZD3000 OBJECT IDENTIFIER  ::= { ruckusWirelessControllerProducts 3 }
 
--- ZD5000 - Access Controller,
+-- ZD5000 - Access Controller, 
 ruckusZD5000 OBJECT IDENTIFIER  ::= { ruckusWirelessControllerProducts 8 }
 
--- ZD6000 - Access Controller,
+-- ZD6000 - Access Controller, 
 --ruckusZD6000 OBJECT IDENTIFIER  ::= { ruckusWirelessControllerProducts 9 }
 
 -- ZD1200 - Access Controller, 2 Ethernet ports, 2048MB Flash, 2048MB DRAM
@@ -789,18 +1097,76 @@ ruckusZD5000CountryCode OBJECT-TYPE
         "Country code"
     ::= { ruckusZD5000 9 }
 
---
--- Wireless SmartCell Gateway Products
---
--- SCG200
-ruckusSCG200 OBJECT IDENTIFIER  ::= { ruckusWirelessSmartCellGatewayProducts 1 }
+ruckusZD1200SystemName OBJECT-TYPE
+    SYNTAX  DisplayString
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "System name"
+    ::= { ruckusZD1200 1 }
 
---
--- Wireless SmartZone Products
---
--- SZ100
-ruckusSZ100 OBJECT IDENTIFIER  ::= { ruckusWirelessSmartZoneProducts 1 }
+ruckusZD1200SystemIPAddr OBJECT-TYPE
+    SYNTAX  IpAddress
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "IP Address"
+    ::= { ruckusZD1200 2 }
 
-ruckusSZ50 OBJECT IDENTIFIER  ::= { ruckusWirelessSmartZoneProducts 2 }
+ruckusZD1200SystemMacAddr OBJECT-TYPE
+    SYNTAX  MacAddress
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "MAC Address"
+    ::= { ruckusZD1200 3 }
+
+ruckusZD1200SystemUptime OBJECT-TYPE
+    SYNTAX  TimeTicks
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Up time"
+    ::= { ruckusZD1200 4 }
+
+ruckusZD1200SystemModel OBJECT-TYPE
+    SYNTAX  DisplayString
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Model"
+    ::= { ruckusZD1200 5 }
+
+ruckusZD1200SystemLicensedAPs OBJECT-TYPE
+    SYNTAX  Unsigned32
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Licensed APs"
+    ::= { ruckusZD1200 6 }
+
+ruckusZD1200SystemSerialNumber OBJECT-TYPE
+    SYNTAX  DisplayString
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Serial number"
+    ::= { ruckusZD1200 7 }
+
+ruckusZD1200SystemVersion OBJECT-TYPE
+    SYNTAX  DisplayString
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Software version"
+    ::= { ruckusZD1200 8 }
+
+ruckusZD1200CountryCode OBJECT-TYPE
+    SYNTAX  RuckusCountryCode
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "Country code"
+    ::= { ruckusZD1200 9 }
 
 END

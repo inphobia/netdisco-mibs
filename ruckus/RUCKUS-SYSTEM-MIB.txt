@@ -247,7 +247,7 @@ ruckusSystemFlexMasterURL OBJECT-TYPE
     DESCRIPTION
         "Config FlexMaster server URL. URL start with 'http://' or 'https://'"
     ::= { ruckusSystemFlexMaster 1 }
-   
+    
 -- System Commands
 --
 

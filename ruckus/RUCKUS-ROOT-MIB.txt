@@ -1,11 +1,6 @@
 --
--- Copyright 2010-2014 Ruckus Wireless, Inc. All rights reserved.
---
--- RUCKUS WIRELESS, INC. CONFIDENTIAL -
--- This is an unpublished, proprietary work of Ruckus Wireless, Inc., and is
--- fully protected under copyright and trade secret laws. You may not view,
--- use, disclose, copy, or distribute this file or any information contained
--- herein except pursuant to a valid license from Ruckus.
+-- Copyright (c) 2010 by Ruckus Wireless, Inc.
+-- All Rights Reserved
 --
 
 RUCKUS-ROOT-MIB DEFINITIONS ::= BEGIN
@@ -16,19 +11,19 @@ IMPORTS
         FROM SNMPv2-SMI;
 
 ruckusRootMIB MODULE-IDENTITY
-    LAST-UPDATED "201405191100Z"
+    LAST-UPDATED "201010150800Z"
     ORGANIZATION "Ruckus Wireless, Inc."
     CONTACT-INFO
         "Ruckus Wireless, Inc.
 
+        Postal:
         350 West Java Dr.
         Sunnyvale, CA 94089
         USA
 
-        T: +1 (650) 265-4200
-        F: +1 (408) 738-2065
-        EMail: info@ruckuswireless.com
-        Web: www.ruckuswireless.com"
+        EMail: support@ruckuswireless.com
+
+        Phone: +1-650-265-4200"
     DESCRIPTION
         "Ruckus top level mib."
     ::= { enterprises 25053 }
@@ -100,5 +95,14 @@ ruckusCTRLWLANModule OBJECT IDENTIFIER      ::= { ruckusCTRL 1 }
 ruckusEvents OBJECT IDENTIFIER    ::= { ruckusRootMIB 2 }
 
 ruckusProducts OBJECT IDENTIFIER  ::= { ruckusRootMIB 3 }
+
+-- Conformance & Complliance
+--
+
+ruckusConformance OBJECT IDENTIFIER  ::= { ruckusRootMIB 4 }
+
+ruckusConfGroups OBJECT IDENTIFIER   ::= { ruckusConformance 1 }
+
+ruckusCompliances OBJECT IDENTIFIER  ::= { ruckusConformance 2 }
 
 END

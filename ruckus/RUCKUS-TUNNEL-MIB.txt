@@ -79,7 +79,7 @@ RuckusTunnelSoftGREStatusEntry ::= SEQUENCE {
     ruckusTunnelSoftGRETunnelChangeCounter           	Counter32}
 
 ruckusTunnelSoftGREIndex OBJECT-TYPE
-    SYNTAX  Unsigned32
+    SYNTAX  Unsigned32 
     MAX-ACCESS read-only
     STATUS current
     DESCRIPTION
@@ -152,7 +152,7 @@ ruckusTunnelSoftGRECurrentActivePeerIp  OBJECT-TYPE
     MAX-ACCESS read-only
     STATUS current
     DESCRIPTION
-        "show the SoftGRE Active Peer IP Address"  
+        "show the SoftGRE Active Peer IP Address"   
    ::= { ruckusTunnelSoftGREStatusEntry 1 }
 
 ruckusTunnelSoftGREUptime OBJECT-TYPE
@@ -163,7 +163,7 @@ ruckusTunnelSoftGREUptime OBJECT-TYPE
         "show the SoftGRE Uptime"
    ::= { ruckusTunnelSoftGREStatusEntry 2 }
 
-ruckusTunnelSoftGREKeepAliveDropCounter OBJECT-TYPE  
+ruckusTunnelSoftGREKeepAliveDropCounter OBJECT-TYPE   
     SYNTAX Counter32
     MAX-ACCESS read-only
     STATUS current

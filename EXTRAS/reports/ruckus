@@ -404,6 +404,8 @@
                             ruckusWLANWPAEntry(1) type=0
                               ruckusWLANWPAVersion(5) type=3
                               ruckusWLANWPAKey(12) type=2 hint=255a
+                              ruckusWLANWPASAEKey(13) type=2 hint=255a
+                              ruckusWLANWPASAEH2EType(14) type=3
                               ruckusWLANWPARadiusNasId(15) type=2 hint=255a
                               ruckusWLANWPAReAuthenticationPeriod(20) type=3
                           ruckusWLANAAAServerTable(4) type=0
@@ -2746,8 +2748,37 @@
                     ruckusH320(93) type=0
                     ruckusE510(94) type=0
                     ruckusC110(95) type=0
+                      ruckusC110ControlLED(3) type=3
+                      ruckusC110WanIPAddr(4) type=5
+                      ruckusC110Customization(5) type=0
+                        ruckusC110HTTPService(1) type=3
+                        ruckusC110TelnetService(2) type=3
+                        ruckusC110SSHService(3) type=3
+                        ruckusC110Username(4) type=2 hint=255a
+                        ruckusC110Password(5) type=2 hint=255a
+                      ruckusC110CpeAgingOutTimer(9) type=3
+                      ruckusC110WanIPV6Addr(10) type=2 hint=255a
                     ruckusCMM310(96) type=0
+                      ruckusCMM310ControlLED(3) type=3
+                      ruckusCMM310WanIPAddr(4) type=5
+                      ruckusCMM310Customization(5) type=0
+                        ruckusCMM310HTTPService(1) type=3
+                        ruckusCMM310TelnetService(2) type=3
+                        ruckusCMM310SSHService(3) type=0
+                          ruckusCMM310SSHLanService(1) type=3
+                          ruckusCMM310SSHWanService(2) type=3
+                        ruckusCMM310Username(4) type=2 hint=255a
+                        ruckusCMM310Password(5) type=2 hint=255a
+                        ruckusCMM310SKUInformation(6) type=0
+                          ruckusCMM310SKUID(1) type=3
+                          ruckusCMM310SKUCurrentRFSplit(2) type=2 hint=255a
+                        ruckusCMM310EthernetMonitorService(7) type=3
+                      ruckusCMM310CpeAgingOutTimer(9) type=3
+                      ruckusCMM310WanIPV6Addr(10) type=2 hint=255a
                     ruckusT811CM(97) type=0
+                      ruckusT811CMControlLED(3) type=3
+                      ruckusCMM310WanIPAddr(4) type=5
+                      ruckusCMM310WanIPV6Addr(10) type=2 hint=255a
                     ruckusT610S(99) type=0
                     ruckusR610(100) type=0
                     ruckusT610(101) type=0
@@ -2762,6 +2793,18 @@
                     ruckusT305I(110) type=0
                     ruckusT305E(111) type=0
                     ruckusT750(112) type=0
+                    ruckusR650(113) type=0
+                    ruckusR550(114) type=0
+                    ruckusR850(115) type=0
+                    ruckusT750SE(116) type=0
+                    ruckusH550(117) type=0
+                    ruckusT350C(118) type=0
+                    ruckusT350D(119) type=0
+                    ruckusT350SE(120) type=0
+                    ruckusR350(121) type=0
+                    ruckusH350(122) type=0
+                    ruckusR760(123) type=0
+                    ruckusR560(124) type=0
                   ruckusWirelessControllerProducts(5) type=0
                     ruckusZD1000(1) type=0
                       ruckusZD1000SystemName(1) type=2 hint=255a
@@ -2804,11 +2847,23 @@
                       ruckusZD5000SystemVersion(8) type=2 hint=255a
                       ruckusZD5000CountryCode(9) type=2
                     ruckusZD1200(15) type=0
+                      ruckusZD1200SystemName(1) type=2 hint=255a
+                      ruckusZD1200SystemIPAddr(2) type=5
+                      ruckusZD1200SystemMacAddr(3) type=2 hint=1x:
+                      ruckusZD1200SystemUptime(4) type=8
+                      ruckusZD1200SystemModel(5) type=2 hint=255a
+                      ruckusZD1200SystemLicensedAPs(6) type=15
+                      ruckusZD1200SystemSerialNumber(7) type=2 hint=255a
+                      ruckusZD1200SystemVersion(8) type=2 hint=255a
+                      ruckusZD1200CountryCode(9) type=2
                   ruckusWirelessSmartCellGatewayProducts(10) type=0
                     ruckusSCG200(1) type=0
                   ruckusWirelessSmartZoneProducts(11) type=0
                     ruckusSZ100(1) type=0
                     ruckusSZ50(2) type=0
+              ruckusConformance(4) type=0
+                ruckusConfGroups(1) type=0
+                ruckusCompliances(2) type=0
         security(5) type=0
         snmpV2(6) type=0
           snmpDomains(1) type=0
