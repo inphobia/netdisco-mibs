@@ -1,0 +1,318 @@
+  org(3) type=0
+    dod(6) type=0
+      internet(1) type=0
+        directory(1) type=0
+        mgmt(2) type=0
+          mib-2(1) type=0
+            system(1) type=0
+              sysDescr(1) type=2 hint=255a
+              sysObjectID(2) type=1
+              sysUpTime(3) type=8
+              sysContact(4) type=2 hint=255a
+              sysName(5) type=2 hint=255a
+              sysLocation(6) type=2 hint=255a
+              sysServices(7) type=3
+              sysORLastChange(8) type=8
+              sysORTable(9) type=0
+                sysOREntry(1) type=0
+                  sysORIndex(1) type=3
+                  sysORID(2) type=1
+                  sysORDescr(3) type=2 hint=255a
+                  sysORUpTime(4) type=8
+            transmission(10) type=0
+            snmp(11) type=0
+              snmpInPkts(1) type=6
+              snmpOutPkts(2) type=6
+              snmpInBadVersions(3) type=6
+              snmpInBadCommunityNames(4) type=6
+              snmpInBadCommunityUses(5) type=6
+              snmpInASNParseErrs(6) type=6
+              snmpInTooBigs(8) type=6
+              snmpInNoSuchNames(9) type=6
+              snmpInBadValues(10) type=6
+              snmpInReadOnlys(11) type=6
+              snmpInGenErrs(12) type=6
+              snmpInTotalReqVars(13) type=6
+              snmpInTotalSetVars(14) type=6
+              snmpInGetRequests(15) type=6
+              snmpInGetNexts(16) type=6
+              snmpInSetRequests(17) type=6
+              snmpInGetResponses(18) type=6
+              snmpInTraps(19) type=6
+              snmpOutTooBigs(20) type=6
+              snmpOutNoSuchNames(21) type=6
+              snmpOutBadValues(22) type=6
+              snmpOutGenErrs(24) type=6
+              snmpOutGetRequests(25) type=6
+              snmpOutGetNexts(26) type=6
+              snmpOutSetRequests(27) type=6
+              snmpOutGetResponses(28) type=6
+              snmpOutTraps(29) type=6
+              snmpEnableAuthenTraps(30) type=3
+              snmpSilentDrops(31) type=6
+              snmpProxyDrops(32) type=6
+            entityMIB(47) type=24
+              entityMIBObjects(1) type=0
+                entityPhysical(1) type=0
+                  entPhysicalTable(1) type=0
+                    entPhysicalEntry(1) type=0
+                      entPhysicalIndex(1) type=16 hint=d
+                      entPhysicalDescr(2) type=2 hint=255t
+                      entPhysicalVendorType(3) type=1
+                      entPhysicalContainedIn(4) type=16 hint=d
+                      entPhysicalClass(5) type=3
+                      entPhysicalParentRelPos(6) type=16
+                      entPhysicalName(7) type=2 hint=255t
+                      entPhysicalHardwareRev(8) type=2 hint=255t
+                      entPhysicalFirmwareRev(9) type=2 hint=255t
+                      entPhysicalSoftwareRev(10) type=2 hint=255t
+                      entPhysicalSerialNum(11) type=2 hint=255t
+                      entPhysicalMfgName(12) type=2 hint=255t
+                      entPhysicalModelName(13) type=2 hint=255t
+                      entPhysicalAlias(14) type=2 hint=255t
+                      entPhysicalAssetID(15) type=2 hint=255t
+                      entPhysicalIsFRU(16) type=3
+                      entPhysicalMfgDate(17) type=2 hint=2d-1d-1d,1d:1d:1d.1d,1a1d:1d
+                      entPhysicalUris(18) type=2
+                      entPhysicalUUID(19) type=2 hint=4x-2x-2x-1x1x-6x
+                entityLogical(2) type=0
+                  entLogicalTable(1) type=0
+                    entLogicalEntry(1) type=0
+                      entLogicalIndex(1) type=16
+                      entLogicalDescr(2) type=2 hint=255t
+                      entLogicalType(3) type=1
+                      entLogicalCommunity(4) type=2
+                      entLogicalTAddress(5) type=2
+                      entLogicalTDomain(6) type=1
+                      entLogicalContextEngineID(7) type=2
+                      entLogicalContextName(8) type=2 hint=255t
+                entityMapping(3) type=0
+                  entLPMappingTable(1) type=0
+                    entLPMappingEntry(1) type=0
+                      entLPPhysicalIndex(1) type=16 hint=d
+                  entAliasMappingTable(2) type=0
+                    entAliasMappingEntry(1) type=0
+                      entAliasLogicalIndexOrZero(1) type=16
+                      entAliasMappingIdentifier(2) type=1
+                  entPhysicalContainsTable(3) type=0
+                    entPhysicalContainsEntry(1) type=0
+                      entPhysicalChildIndex(1) type=16 hint=d
+                entityGeneral(4) type=0
+                  entLastChangeTime(1) type=8
+              entityMIBTraps(2) type=0
+                entityMIBTrapPrefix(0) type=0
+                  entConfigChange(1) type=21
+              entityConformance(3) type=0
+                entityCompliances(1) type=0
+                  entityCompliance(1) type=26
+                  entity2Compliance(2) type=26
+                  entity3Compliance(3) type=26
+                  entity4Compliance(4) type=26
+                  entity4CRCompliance(5) type=26
+                entityGroups(2) type=0
+                  entityPhysicalGroup(1) type=22
+                  entityLogicalGroup(2) type=22
+                  entityMappingGroup(3) type=22
+                  entityGeneralGroup(4) type=22
+                  entityNotificationsGroup(5) type=23
+                  entityPhysical2Group(6) type=22
+                  entityLogical2Group(7) type=22
+                  entityPhysical3Group(8) type=22
+                  entityPhysical4Group(9) type=22
+                  entityPhysicalCRGroup(10) type=22
+            ianaEntityMIB(216) type=24
+            uuidTCMIB(217) type=24
+        experimental(3) type=0
+        private(4) type=0
+          enterprises(1) type=0
+            scteRoot(5591) type=0
+              scteHmsTree(1) type=0
+                heCommonTrapPrefix(0) type=0
+                hmsScteRootMIB(0) type=24
+                  heCommonAlarmEvent(5) type=21
+                propertyIdent(1) type=0
+                  propertyTable(1) type=0
+                    propertyEntry(1) type=0
+                      parameterOID(1) type=1
+                      alarmEnable(2) type=2
+                      currentAlarmState(3) type=3
+                      analogAlarmHIHI(4) type=16
+                      analogAlarmHI(5) type=16
+                      analogAlarmLO(6) type=16
+                      analogAlarmLOLO(7) type=16
+                      analogAlarmDeadband(9) type=16
+                  currentAlarmTable(2) type=0
+                    currentAlarmEntry(1) type=0
+                      currentAlarmOID(1) type=1
+                      currentAlarmAlarmState(2) type=3
+                      currentAlarmAlarmValue(3) type=16
+                  discretePropertyTable(3) type=0
+                    discretePropertyEntry(1) type=0
+                      discreteParameterOID(1) type=1
+                      discreteAlarmValue(2) type=16
+                      discreteAlarmEnable(3) type=3
+                      discreteAlarmState(4) type=3
+                  propertyModuleIdentity(4) type=24
+                    propertyMIBConformance(1) type=0
+                      propertyMIBCompliances(1) type=0
+                        propertyMIBCompliance(1) type=26
+                      propertyMIBGroups(2) type=0
+                        analogAlarmsGroup(1) type=22
+                        discreteAlarmsGroup(2) type=22
+                        currentAlarmsGroup(3) type=22
+                alarmsIdent(2) type=0
+                commonIdent(3) type=0
+                psIdent(4) type=0
+                fnIdent(5) type=0
+                genIdent(6) type=0
+                transponderInterfaceBusIdent(7) type=0
+                downloadIdent(8) type=0
+                oaIdent(9) type=0
+                rfAmplifierIdent(10) type=0
+                insidePlantIdent(11) type=0
+                  headEndIdentMib(0) type=24
+                  heOptics(1) type=27
+                  heBaseIdent(2) type=27
+                    heCommon(1) type=27
+                      heCommonMib(1) type=24
+                        heCommonObjects(1) type=0
+                          heCommonParams(1) type=0
+                            heCommonTable(1) type=0
+                              heCommonEntry(1) type=0
+                                heCommonTime(1) type=2 hint=2d-1d-1d,1d:1d:1d.1d,1a1d:1d
+                                heCommonTemperature(2) type=16 hint=d-1
+                                heCommonSoftwareReset(3) type=3
+                                heCommonAlarmDetectionControl(4) type=3
+                          heCommonLog(2) type=0
+                            heCommonLogNumberOfEntries(1) type=16
+                            heCommonLogLastIndex(2) type=16
+                            heCommonLogTable(3) type=0
+                              heCommonLogEntry(1) type=0
+                                heCommonLogIndex(1) type=16
+                                heCommonLogOID(2) type=1
+                                heCommonLogValue(3) type=16
+                                heCommonLogState(4) type=3
+                                heCommonLogTime(5) type=2 hint=2d-1d-1d,1d:1d:1d.1d,1a1d:1d
+                                heCommonLogText(6) type=2 hint=255a
+                        heCommonTraps(2) type=0
+                        heCommonConformance(3) type=0
+                          heCommonCompliances(1) type=0
+                            heCommonCompliance(1) type=26
+                          heCommonGroups(2) type=0
+                            heCommonParamsGroup(1) type=22
+                            heCommonLogGroup(2) type=22
+                            heCommonNotificationsGroup(3) type=23
+                    hePowerSupply(2) type=27
+                    heFans(3) type=27
+                  heHMTS(3) type=27
+                  heRF(4) type=27
+                  heDigital(5) type=27
+                  heManagedServer(6) type=27
+                voipIdent(12) type=0
+                multiMediaIdent(13) type=0
+        security(5) type=0
+        snmpV2(6) type=0
+          snmpDomains(1) type=0
+          snmpProxys(2) type=0
+          snmpModules(3) type=0
+            snmpMIB(1) type=24
+              snmpMIBObjects(1) type=0
+                snmpTrap(4) type=0
+                  snmpTrapOID(1) type=1
+                  snmpTrapEnterprise(3) type=1
+                snmpTraps(5) type=0
+                  coldStart(1) type=21
+                  warmStart(2) type=21
+                  authenticationFailure(5) type=21
+                snmpSet(6) type=0
+                  snmpSetSerialNo(1) type=3
+              snmpMIBConformance(2) type=0
+                snmpMIBCompliances(1) type=0
+                  snmpBasicCompliance(2) type=26
+                  snmpBasicComplianceRev2(3) type=26
+                snmpMIBGroups(2) type=0
+                  snmpSetGroup(5) type=22
+                  systemGroup(6) type=22
+                  snmpBasicNotificationsGroup(7) type=23
+                  snmpGroup(8) type=22
+                  snmpCommunityGroup(9) type=22
+                  snmpObsoleteGroup(10) type=22
+                  snmpWarmStartNotificationGroup(11) type=23
+                  snmpNotificationGroup(12) type=22
+            snmpFrameworkMIB(10) type=24
+              snmpFrameworkAdmin(1) type=0
+                snmpAuthProtocols(1) type=27
+                snmpPrivProtocols(2) type=27
+              snmpFrameworkMIBObjects(2) type=0
+                snmpEngine(1) type=0
+                  snmpEngineID(1) type=2
+                  snmpEngineBoots(2) type=3
+                  snmpEngineTime(3) type=3 units=seconds
+                  snmpEngineMaxMessageSize(4) type=3
+              snmpFrameworkMIBConformance(3) type=0
+                snmpFrameworkMIBCompliances(1) type=0
+                  snmpFrameworkMIBCompliance(1) type=26
+                snmpFrameworkMIBGroups(2) type=0
+                  snmpEngineGroup(1) type=22
+            snmpTargetMIB(12) type=24
+              snmpTargetObjects(1) type=0
+                snmpTargetSpinLock(1) type=3
+                snmpTargetAddrTable(2) type=0
+                  snmpTargetAddrEntry(1) type=0
+                    snmpTargetAddrName(1) type=2 hint=255t
+                    snmpTargetAddrTDomain(2) type=1
+                    snmpTargetAddrTAddress(3) type=2
+                    snmpTargetAddrTimeout(4) type=3
+                    snmpTargetAddrRetryCount(5) type=16
+                    snmpTargetAddrTagList(6) type=2 hint=255t
+                    snmpTargetAddrParams(7) type=2 hint=255t
+                    snmpTargetAddrStorageType(8) type=3
+                    snmpTargetAddrRowStatus(9) type=3
+                snmpTargetParamsTable(3) type=0
+                  snmpTargetParamsEntry(1) type=0
+                    snmpTargetParamsName(1) type=2 hint=255t
+                    snmpTargetParamsMPModel(2) type=3
+                    snmpTargetParamsSecurityModel(3) type=3
+                    snmpTargetParamsSecurityName(4) type=2 hint=255t
+                    snmpTargetParamsSecurityLevel(5) type=3
+                    snmpTargetParamsStorageType(6) type=3
+                    snmpTargetParamsRowStatus(7) type=3
+                snmpUnavailableContexts(4) type=6
+                snmpUnknownContexts(5) type=6
+              snmpTargetConformance(3) type=0
+                snmpTargetCompliances(1) type=0
+                  snmpTargetCommandResponderCompliance(1) type=26
+                snmpTargetGroups(2) type=0
+                  snmpTargetBasicGroup(1) type=22
+                  snmpTargetResponseGroup(2) type=22
+                  snmpTargetCommandResponderGroup(3) type=22
+            snmpNotificationMIB(13) type=24
+              snmpNotifyObjects(1) type=0
+                snmpNotifyTable(1) type=0
+                  snmpNotifyEntry(1) type=0
+                    snmpNotifyName(1) type=2 hint=255t
+                    snmpNotifyTag(2) type=2 hint=255t
+                    snmpNotifyType(3) type=3
+                    snmpNotifyStorageType(4) type=3
+                    snmpNotifyRowStatus(5) type=3
+                snmpNotifyFilterProfileTable(2) type=0
+                  snmpNotifyFilterProfileEntry(1) type=0
+                    snmpNotifyFilterProfileName(1) type=2 hint=255t
+                    snmpNotifyFilterProfileStorType(2) type=3
+                    snmpNotifyFilterProfileRowStatus(3) type=3
+                snmpNotifyFilterTable(3) type=0
+                  snmpNotifyFilterEntry(1) type=0
+                    snmpNotifyFilterSubtree(1) type=1
+                    snmpNotifyFilterMask(2) type=2
+                    snmpNotifyFilterType(3) type=3
+                    snmpNotifyFilterStorageType(4) type=3
+                    snmpNotifyFilterRowStatus(5) type=3
+              snmpNotifyConformance(3) type=0
+                snmpNotifyCompliances(1) type=0
+                  snmpNotifyBasicCompliance(1) type=26
+                  snmpNotifyBasicFiltersCompliance(2) type=26
+                  snmpNotifyFullCompliance(3) type=26
+                snmpNotifyGroups(2) type=0
+                  snmpNotifyGroup(1) type=22
+                  snmpNotifyFilterGroup(2) type=22
+  zeroDotZero(0) type=27
